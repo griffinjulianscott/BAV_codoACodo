@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAV</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo&display=swap" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/f419c5f046e147fd41c9c2aa590c1750?family=PARINOCK" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="shortcut icon" href="img/BAV.flor.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3682b977b2.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="header-logo"><a href="index.html"><img src="img/BAV.isologo.png" alt=""></a>
+
+        </div>
+        <div class="header-menubar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+        </div>
+        </nav>
+    </header>
+    <main>
+        <section class="d-flex">
+            <div class="container">
+                <div class="card-banner"></div>
+                    <div id="ContentFormulario">
+                        <button style="width:100px;margin: 10px 0px;padding: 10px;background:#d5cfc1;color:#344736;border:none;border-radius: 20px;font-family: 'Arimo', Arial, Helvetica, sans-serif;font-size: 1rem;font-weight: bold;" onclick="GeneraForm()">Realiza tu <br> consulta</button>
+                    </div> 
+                    <script type="text/javascript">
+        //Metodo Generación Formulario
+        function GeneraForm(){
+            ////Crear el objeto formulario
+            let formulario=document.createElement("form");
+     
+            ////Crear el objeto label de titulo
+            let titulo=document.createElement("label");
+     
+            ////Crear el objeto caja de texto Nombres
+            let cajaTextNombres=document.createElement("input");
+     
+            ////Crear el objeto caja de texto Apellidos
+            let cajaTextApellidos=document.createElement("input");
+     
+            ////Crear el objeto caja de texto Email
+            let cajaTextEmail=document.createElement("input");
+     
+            ////Crear el objeto caja de texto Asunto del Mensaje
+            let cajaTextAsunto=document.createElement("input");
+     
+            ////Crear el objeto area de texto del Mensaje
+            let cajaTextMensaje=document.createElement("textarea");
+     
+            ////Crear el objeto boton
+            let boton=document.createElement("input");
+     
+            ////Asignar atributos al objeto formulario
+                formulario.setAttribute('method', "post");//Asignar el atributo method
+                formulario.setAttribute('action', "");//Asignar el atributo action
+                formulario.setAttribute('style', "width:300px;margin: 0px auto");//Asignar el atributo style
+     
+                ////Asignar atributos al objeto caja de texto de Nombres
+                cajaTextNombres.setAttribute('type', "text");//Asignar el atributo type
+                cajaTextNombres.setAttribute('placeholder', "Nombres");//Asignar el atributo placeholder
+                cajaTextNombres.setAttribute('style', "width:100%;margin: 10px 0px;padding: 5px");//Asignar el atributo style
+     
+                ////Asignar atributos al objeto caja de texto de Apellidos
+                cajaTextApellidos.setAttribute('type', "text");//Asignar el atributo type
+                cajaTextApellidos.setAttribute('placeholder', "Apellidos");//Asignar el atributo placeholder
+                cajaTextApellidos.setAttribute('style', "width:100%;margin: 10px 0px;padding: 5px");//Asignar el atributo style
+     
+                ////Asignar atributos al objeto caja de texto de Email
+                cajaTextEmail.setAttribute('type', "text");//Asignar el atributo type
+                cajaTextEmail.setAttribute('placeholder', "Email");//Asignar el atributo placeholder
+                cajaTextEmail.setAttribute('style', "width:100%;margin: 10px 0px;padding: 5px");//Asignar el atributo style
+     
+                ////Asignar atributos al objeto caja de texto de Asunto
+                cajaTextAsunto.setAttribute('type', "text");//Asignar el atributo type
+                cajaTextAsunto.setAttribute('placeholder', "Asunto");//Asignar el atributo placeholder
+                cajaTextAsunto.setAttribute('style', "width:100%;margin: 10px 0px;padding: 5px");//Asignar el atributo style
+     
+                ////Asignar atributos al objeto area de texto de Mensaje
+                cajaTextMensaje.setAttribute('placeholder', "Mensaje");//Asignar el atributo placeholder
+                cajaTextMensaje.setAttribute('style', "width:100%;height:200px;margin: 10px 0px;padding: 5px");//Asignar el atributo style
+     
+            ////Asignar atributos al objeto boton
+            boton.setAttribute('type', "button");//Asignar el atributo type	
+                boton.setAttribute('value', "Enviar");//Asignar el atributo value
+                boton.setAttribute('style', "width:100px;margin: 10px 0px;padding: 10px;background:#344736;color:#d5cfc1;border:none;");//Asignar el atributo style
+                boton.setAttribute('onclick', "alert('Se envio el mensaje')");//Asignar el metodo onclick
+     
+                titulo.innerHTML='<h1>Envianos tu mensaje</h1>';//Asignar el texto de titulo en el objeto titulo
+                formulario.appendChild(titulo);//Agregar el objeto titulo al objeto formulario
+                formulario.appendChild(cajaTextNombres);//Agregar el objeto caja de texto Nombres al objeto formulario
+                formulario.appendChild(cajaTextApellidos);//Agregar el objeto caja de texto Apellidos al objeto formulario
+                formulario.appendChild(cajaTextEmail);//Agregar el objeto caja de texto Email al objeto formulario
+                formulario.appendChild(cajaTextAsunto);//Agregar el objeto caja de texto Asunto al objeto formulario
+                formulario.appendChild(cajaTextMensaje);//Agregar el objeto area de texto del Mensaje al objeto formulario
+                formulario.appendChild(boton);//Agregar el objeto boton al objeto formulario
+                document.getElementById('ContentFormulario').appendChild(formulario);//Agregar el formulario a la etiquete con el ID			
+        }
+     
+                    </script> 
+                </div>    
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <i class="fa-solid fa-cannabis"></i> 
+              TODOS LOS DERECHOS RESERVADOS
+        </div>
+    </footer>
+
+</body>
+</html>
