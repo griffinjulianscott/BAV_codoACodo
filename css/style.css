@@ -17,7 +17,7 @@ body, header, main, footer {
 
 body{
     background-color: white;
-    font-family: 'Arimo', Arial, Helvetica, sans-serif;
+    font-family: Arimo, Arial, Helvetica, sans-serif;
 }
 
 main{
@@ -128,7 +128,7 @@ nav{
 
 .card-banner h2{
     margin-bottom: 20px;
-    font-family: 'Anton', Arial, Helvetica, sans-serif;
+    font-family: Anton, Arial, Helvetica, sans-serif;
 }
 
 .d-iframe{
@@ -136,8 +136,13 @@ nav{
     padding: 0px 40px;
 }
 
+@font-face {
+  font-family: Parinock;
+  src: url(PARINOCK.ttf);
+}
+
 #BAV{
-    font-family: 'Parinock', Arial, Helvetica, sans-serif;
+    font-family: Parinock, Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 6vw;
 }
